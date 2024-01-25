@@ -1,0 +1,15 @@
+<button {{(if this.bindClickHandler (modifier this.on 'click' this.handleClick))}}>
+  Click me
+</button>
+
+<div>
+  Click handler is bound: {{this.bindClickHandler}}
+</div>
+
+<button {{on 'click' this.toggleBindClickHandler}}>
+  Toggle Bind Click Handler
+</button>
+
+{{#if this.wasClicked}}
+  <div>Button was clicked</div>
+{{/if}}
